@@ -28,6 +28,9 @@
 
           el.addEventListener("click", function (evt) {
             alert(alertMessages[data.type])
+            if(alertMessages[data.type] === "correct") {
+              window.parent.postMessage('nextLevel')
+            }
           });
         },
       });
